@@ -1,3 +1,55 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*inicio do reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* fim do reset css*/
+
 /*
 Theme Name: KenzieFlix
 Author: Kenzie Academy
@@ -14,25 +66,178 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+
 /* VARIÁVEIS */
 :root{
   
 }
 
 /*BODY*/
-	body{
-
-	}
-
-/*TOPO*/
-	header.topo{
-		
-	}
-
-/*RODAPÉ*/
+body{
+	background-color: #00002E;
+	font-family: "Helvetica Neue",sans-serif;
 	
 
+}
+
+/*TOPO*/
+header.topo{
+	
+}
+
+header figure img{
+	height:60px;
+	 
+}
+
+/*RODAPÉ*/
+
+footer{
+	margin-top: 25px;
+	text-align: center;
+
+
+}
+
+footer button{
+	padding: 15px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+	font-weight: bold;
+
+}	
+
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
+div.pg-home{
+	display:flex; 
+	flex-direction:row; 
+	justify-content:center;
+	align-items: center;
+	min-height:80vh;
+
+}
+
+section{
+	width: 858px;
+	
+}
+
+h2{
+	font-size:64px ;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 50px;
+
+}
+
+h3{
+	font-size: 18px;
+	color: white;
+	margin: 15px 0;
+
+}
+
+ul{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+ul li:nth-child(-n + 4){
+	width: 186px;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+ul li figure:nth-child(-n + 4){
+	margin-bottom: 15px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+ul li:nth-child(-n + 3) img{
+	width: 186px;
+
+}
+
+ul li:nth-child(-n + 3) img:hover{
+	border: 1px solid white;
+	box-sizing: border-box;
+	
+}
+
+.addPerfil{
+ 
+}
+
+figcaption{
+	display: none;
+
+}
+
+/*media queries*/
+
+/*device tipo tablet*/
+@media (max-width: 768px)
+{	
+	h2{
+		font-size: 35px;
+
 	}
+
+	ul li:nth-child(-n + 3) img{
+		width: 120px;
+	}
+
+    section{
+    	width: 550px;
+
+   }
+
+   figure{
+		text-align: center;
+
+   }
+
+}
+
+/*device tipo mobile*/
+@media (max-width: 320px)
+{
+	h2{
+		font-size: 22px;
+
+	}
+
+   figure{
+    	text-align: center;
+
+	}
+
+	section{
+		width: 320px;
+	}
+
+	
+	ul li:nth-child(-n + 4) {
+		width: 120px;
+	}
+
+	ul li:nth-child(-n + 3) img{
+		width: 60px;
+	}
+
+	
+}
